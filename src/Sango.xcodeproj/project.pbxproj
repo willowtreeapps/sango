@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA1CA53A1D6E568A009CF0FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CA5391D6E568A009CF0FC /* Version.swift */; };
+		AA89E00B1D8760DC00D2D9A8 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AA89E00A1D8760DC00D2D9A8 /* NSString+Extras.m */; };
+		AAB57D9E1D5B883800FA37CA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB57D9C1D5B883800FA37CA /* App.swift */; };
+		AAB57D9F1D5B883800FA37CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB57D9D1D5B883800FA37CA /* main.swift */; };
+		AAC944A81E0B8B2C00CFFFA1 /* Reserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC944A71E0B8B2C00CFFFA1 /* Reserved.swift */; };
+		AACE09741D6627CE003CF4F1 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE09731D6627CE003CF4F1 /* Extras.swift */; };
+		AAE52D651D6E032A002BDE3D /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE52D641D6E032A002BDE3D /* Shell.swift */; };
+		AAE52D671D6E0568002BDE3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE52D661D6E0568002BDE3D /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA6C0D751D5A9AB000ECA808 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA1CA5391D6E568A009CF0FC /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/Version.swift; sourceTree = "<group>"; };
+		AA6C0D771D5A9AB000ECA808 /* Sango */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sango; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA89E0081D8760DB00D2D9A8 /* Sango-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Sango-Bridging-Header.h"; path = "Source/Sango-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA89E0091D8760DC00D2D9A8 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extras.h"; path = "Source/NSString+Extras.h"; sourceTree = "<group>"; };
+		AA89E00A1D8760DC00D2D9A8 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extras.m"; path = "Source/NSString+Extras.m"; sourceTree = "<group>"; };
+		AAA944AA1DAC019800608CFB /* base.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
+		AAA944AB1DAC019800608CFB /* brand1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = brand1.json; sourceTree = "<group>"; };
+		AAA944AC1DAC019800608CFB /* brand1_android.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = brand1_android.json; sourceTree = "<group>"; };
+		AAA944AD1DAC019800608CFB /* brand2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = brand2.json; sourceTree = "<group>"; };
+		AAB57D9C1D5B883800FA37CA /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = Source/App.swift; sourceTree = "<group>"; };
+		AAB57D9D1D5B883800FA37CA /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Source/main.swift; sourceTree = "<group>"; };
+		AAC944A71E0B8B2C00CFFFA1 /* Reserved.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reserved.swift; path = Source/Reserved.swift; sourceTree = "<group>"; };
+		AACE09731D6627CE003CF4F1 /* Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extras.swift; path = Source/Extras.swift; sourceTree = "<group>"; };
+		AAE52D641D6E032A002BDE3D /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shell.swift; path = Source/Shell.swift; sourceTree = "<group>"; };
+		AAE52D661D6E0568002BDE3D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA6C0D741D5A9AB000ECA808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA6C0D6E1D5A9AB000ECA808 = {
+			isa = PBXGroup;
+			children = (
+				AA1CA5391D6E568A009CF0FC /* Version.swift */,
+				AAB57D9C1D5B883800FA37CA /* App.swift */,
+				AACE09731D6627CE003CF4F1 /* Extras.swift */,
+				AAE52D641D6E032A002BDE3D /* Shell.swift */,
+				AAE52D661D6E0568002BDE3D /* Utils.swift */,
+				AAC944A71E0B8B2C00CFFFA1 /* Reserved.swift */,
+				AAB57D9D1D5B883800FA37CA /* main.swift */,
+				AA89E0091D8760DC00D2D9A8 /* NSString+Extras.h */,
+				AA89E00A1D8760DC00D2D9A8 /* NSString+Extras.m */,
+				AAA944771DAC019800608CFB /* example */,
+				AA6C0D781D5A9AB000ECA808 /* Products */,
+				AA89E0081D8760DB00D2D9A8 /* Sango-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		AA6C0D781D5A9AB000ECA808 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA6C0D771D5A9AB000ECA808 /* Sango */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAA944771DAC019800608CFB /* example */ = {
+			isa = PBXGroup;
+			children = (
+				AAA944AA1DAC019800608CFB /* base.json */,
+				AAA944AB1DAC019800608CFB /* brand1.json */,
+				AAA944AC1DAC019800608CFB /* brand1_android.json */,
+				AAA944AD1DAC019800608CFB /* brand2.json */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA6C0D761D5A9AB000ECA808 /* Sango */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA6C0D7E1D5A9AB000ECA808 /* Build configuration list for PBXNativeTarget "Sango" */;
+			buildPhases = (
+				AA6C0D731D5A9AB000ECA808 /* Sources */,
+				AA6C0D741D5A9AB000ECA808 /* Frameworks */,
+				AA6C0D751D5A9AB000ECA808 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sango;
+			productName = Sango;
+			productReference = AA6C0D771D5A9AB000ECA808 /* Sango */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA6C0D6F1D5A9AB000ECA808 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Afero, Inc";
+				TargetAttributes = {
+					AA6C0D761D5A9AB000ECA808 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = AA6C0D721D5A9AB000ECA808 /* Build configuration list for PBXProject "Sango" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA6C0D6E1D5A9AB000ECA808;
+			productRefGroup = AA6C0D781D5A9AB000ECA808 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA6C0D761D5A9AB000ECA808 /* Sango */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA6C0D731D5A9AB000ECA808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE52D671D6E0568002BDE3D /* Utils.swift in Sources */,
+				AAC944A81E0B8B2C00CFFFA1 /* Reserved.swift in Sources */,
+				AAB57D9F1D5B883800FA37CA /* main.swift in Sources */,
+				AA89E00B1D8760DC00D2D9A8 /* NSString+Extras.m in Sources */,
+				AACE09741D6627CE003CF4F1 /* Extras.swift in Sources */,
+				AAE52D651D6E032A002BDE3D /* Shell.swift in Sources */,
+				AA1CA53A1D6E568A009CF0FC /* Version.swift in Sources */,
+				AAB57D9E1D5B883800FA37CA /* App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA6C0D7C1D5A9AB000ECA808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA6C0D7D1D5A9AB000ECA808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		AA6C0D7F1D5A9AB000ECA808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Sango-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AA6C0D801D5A9AB000ECA808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Sango-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA6C0D721D5A9AB000ECA808 /* Build configuration list for PBXProject "Sango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6C0D7C1D5A9AB000ECA808 /* Debug */,
+				AA6C0D7D1D5A9AB000ECA808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA6C0D7E1D5A9AB000ECA808 /* Build configuration list for PBXNativeTarget "Sango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6C0D7F1D5A9AB000ECA808 /* Debug */,
+				AA6C0D801D5A9AB000ECA808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA6C0D6F1D5A9AB000ECA808 /* Project object */;
+}

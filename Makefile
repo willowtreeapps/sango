@@ -14,56 +14,41 @@
 # limitations under the License.
 #
 
-TARGET = sango
-
-DATE := $(shell date "+%Y%m%d_%H%M%S")
-BUILD_DATE := $(shell date)
-
-DEST_PATH := $(shell pwd)
-
-REVISION :=$(shell git log --pretty=format:'' | wc -l | sed 's/\ //g')
-
-REVERT := git checkout
-GIT_SHA1 := $(shell git log -1 --pretty=format:'%h')
+SANGO = sango
+RESULTS_IOS = results_ios
+RESULTS_TESTS = results_tests
+RESULTS_ANDROID = results_android
 
 all:
-	@echo "Targets:"
-	@echo "   distro"
-	@echo "   install"
-	@echo "   version"
-	@echo "   run"
-	@echo "   clean"
+	@echo "Example to build sango data for iOS, Android and Test Automation used for testing."
+	@echo " build_test_automation"
+	@echo " build_ios"
+	@echo " build_android"
+	@echo " build_all"
+	@echo " validate"
 
-version:
-	@echo "Current build version: $(REVISION) sha1 $(GIT_SHA1)"
+clean:
+	@rm -rdf $(RESULTS_TESTS)
+	@rm -rdf $(RESULTS_IOS)
 
-_clean_temps:
-	@rm -rdf temp
-	@rm -rdf temp_ios
-	@rm -rdf temp_android
-	
-clean: _clean_temps clear_build
-	@xcodebuild clean &>/dev/null
-	@rm -rdf build
-	@rm -f $(TARGET)
+build_test_automation:
+	@rm -rdf $(RESULTS_TESTS)
+	$(SANGO) -config config_tests.json -verbose
 
-distro: clean set_build
-	@xcodebuild -project Sango.xcodeproj
-	@cp ./build/Release/Sango $(TARGET)
-	@$(MAKE) clear_build
-	@echo "Done!"
+build_ios:
+	@rm -rdf $(RESULTS_IOS)
+	$(SANGO) -config config_ios.json -swift4 -verbose
 
-set_build:
-	@echo "public let BUILD_DATE = "\"$(BUILD_DATE)\" > Source/Version.swift
-	@echo "public let BUILD_REVISION = $(REVISION)" >> Source/Version.swift
+build_android:
+	@rm -rdf $(RESULTS_ANDROID)
+	$(SANGO) -config config_android.json -verbose
 
-clear_build:
-	@$(REVERT) Source/Version.swift
+build_all:
+	set -e
+	@$(MAKE) build_test_automation
+	@$(MAKE) build_ios
+	@$(MAKE) build_android
 
-install: distro
-	@if [ -w /usr/local/bin ]; then \
-	cp $(TARGET) /usr/local/bin/$(TARGET); \
-	else \
-	echo "/usr/local/bin not writable; need permission to install."; \
-	sudo cp $(TARGET) /usr/local/bin/$(TARGET); \
-	fi
+
+validate:
+	$(SANGO) -verbose -input_assets '' -validate *.json
