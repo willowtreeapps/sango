@@ -85,8 +85,6 @@ args.removeFirst()
 
 Utils.setVerbose(findOption(args, option: "-verbose"))
 
-Shell.setup()
-
 App().start(args)
 exit(0)
 
