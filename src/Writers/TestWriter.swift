@@ -16,7 +16,7 @@ class TestWriter : Writer {
         self.configuration = configuration
     }
     
-    func writeIdentifiers(_ identifiers: Dictionary<String, Any>) {
+    func writeIds(_ identifiers: Dictionary<String, Any>) {
     
         if (configuration.package == nil) {
             Utils.always("Test configuration needs a package specified")

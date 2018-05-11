@@ -13,7 +13,7 @@ public protocol Writer {
     
     var configuration: Configuration { get set }
         
-    func writeIdentifiers(_ identifiers: Dictionary<String, Any>)
+    func writeIds(_ identifiers: Dictionary<String, Any>)
 
     func writeConstants(_ name: String, value: Any, level: Int) -> String
 
