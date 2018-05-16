@@ -29,7 +29,7 @@ public enum Platform {
 
 class App {
     
-    var configuration:Configuration? = nil
+    var configuration: Configuration? = nil
 
     func parseConfigFile() {
         let configFile = getOption(args, option: optConfig)
@@ -44,36 +44,36 @@ class App {
         }
     }
     
-    func start(_ args: [String]) -> Void {
+    func start(_ args: [String]) {
    
         parseConfigFile()
 
-        var result:[String:Any]? = nil
+        var result:[String:Any]?
         
-        if (configuration != nil) {
-            result = [:]
-            for file in configuration!.inputs {
-                let filePath = (configuration?.inputAssets)! + "/" + file
-                if let d = Utils.fromJSONFile(filePath) {
-                    result = result! + d
-                }
-                else {
-                    exit(-1)
-                }
-            }
-            
-            if (result != nil) {
-                let writer = WriterFactory.getWriter(with: configuration!)
-                if (result!["Identifiers"] != nil) {
-                    writer.writeIds(result!["Identifiers"] as! Dictionary<String, Any>)
-                }
+        guard let configuration = configuration else {
+            Utils.error("Error: currently only works with a configuration file")
+            exit(-1)
+        }
+        
+        result = [:]
+        for file in configuration.inputs {
+            let filePath = (configuration.inputAssets) + "/" + file
+            if let d = Utils.fromJSONFile(filePath) {
+                result = result! + d
             }
             else {
-                Utils.error("Error: missing input file")
                 exit(-1)
             }
-        } else {
-            Utils.error("Error: currently only works with a configuration file")
+        }
+        
+        guard let combinedResult = result else {
+            Utils.error("Error: missing input file")
+            exit(-1)
+        }
+        
+        let writer = WriterFactory.getWriter(with: configuration)
+        if (combinedResult["Identifiers"] != nil) {
+            writer.writeIds(combinedResult["Identifiers"] as! Dictionary<String, Any>)
         }
     }
 }

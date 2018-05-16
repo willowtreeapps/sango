@@ -1,8 +1,6 @@
-
 import Foundation
 
-
-class AndroidWriter : Writer {
+class AndroidWriter: Writer {
  
     var configuration: Configuration
     

@@ -1,8 +1,7 @@
 
 import Foundation
 
-
-class WebWriter : Writer {
+class WebWriter: Writer {
     var configuration: Configuration
         
     init(configuration: Configuration) {

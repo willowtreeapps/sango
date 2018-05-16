@@ -1,6 +1,6 @@
 import Foundation
 
-class TestWriter : Writer {
+class TestWriter: Writer {
     
     var configuration: Configuration
     

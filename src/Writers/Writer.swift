@@ -1,6 +1,5 @@
 import Foundation
 
-
 public protocol Writer {
     
     var configuration: Configuration { get set }

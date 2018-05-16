@@ -1,7 +1,6 @@
-
 import Foundation
 
-class IOSWriter : Writer {
+class IOSWriter: Writer {
 
     var configuration: Configuration
     
