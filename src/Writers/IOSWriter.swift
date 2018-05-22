@@ -10,14 +10,19 @@ class IOSWriter: Writer {
     
     func writeIds(_ identifiers: Dictionary<String, Any>) {
         
-        Utils.createFolderForFile(configuration.outLocation + configuration.identifierFilename!)
+        guard let identifierFilename = configuration.identifierFilename else {
+            Utils.always("Android configuration needs an Identifier filename specified")
+            exit(-1)
+        }
+        
+        Utils.createFolderForFile(configuration.outLocation + identifierFilename)
         
         var outputString:String = String()
         var tempString:String = String()
         
         outputString.append("/* Auto-generated. Do not modify */\n\n")
         outputString.append("import UIKit\n")
-        outputString.append("public struct \(configuration.identifierFilename!) {\n")
+        outputString.append("public struct \(identifierFilename) {\n")
         
         for (key, value) in Array(identifiers).sorted(by: {$0.0 < $1.0}) {
             let line = writeConstants(key, value:value)
@@ -27,7 +32,7 @@ class IOSWriter: Writer {
         outputString.append(insertTabPerLine(tempString))
         outputString.append("\n}")
         
-        writeToFile(outputString, file: configuration.outLocation + configuration.identifierFilename! + ".swift")
+        writeToFile(outputString, file: configuration.outLocation + identifierFilename + ".swift")
 
     }
     

@@ -10,24 +10,24 @@ class TestWriter: Writer {
     
     func writeIds(_ identifiers: Dictionary<String, Any>) {
     
-        if (configuration.package == nil) {
-            Utils.always("Test configuration needs a package specified")
-            exit(-1)
-        }
-        
-        if (configuration.identifierFilename == nil) {
+        guard let identifierFilename = configuration.identifierFilename else {
             Utils.always("Test configuration needs an Identifier filename specified")
             exit(-1)
         }
         
-        Utils.createFolderForFile(configuration.outLocation + configuration.identifierFilename!)
+        guard let package = configuration.package else {
+            Utils.always("Test configuration needs a package specified")
+            exit(-1)
+        }
+        
+        Utils.createFolderForFile(configuration.outLocation + identifierFilename)
         
         var outputString:String = String()
         var tempString:String = String()
         
         outputString.append("/* Auto-generated. Do not modify */\n")
-        outputString.append("package \(configuration.package!);\n\n")
-        outputString.append("public final class \(configuration.identifierFilename!) {")
+        outputString.append("package \(package);\n\n")
+        outputString.append("public final class \(identifierFilename) {")
 
         for (key, value) in Array(identifiers).sorted(by: {$0.0 < $1.0}) {
         let line = writeConstants(key, value:value)

@@ -9,7 +9,13 @@ class AndroidWriter: Writer {
     }
     
     func writeIds(_ identifiers: Dictionary<String, Any>) {
-        Utils.createFolderForFile(configuration.outLocation + configuration.identifierFilename!)
+        
+        guard let identifierFilename = configuration.identifierFilename else {
+            Utils.always("Android configuration needs an Identifier filename specified")
+            exit(-1)
+        }
+        
+        Utils.createFolderForFile(configuration.outLocation + identifierFilename)
         
         var outputString:String = String()
         
@@ -24,7 +30,7 @@ class AndroidWriter: Writer {
         
         outputString.append("</resources>")
 
-        writeToFile(outputString, file: configuration.outLocation + configuration.identifierFilename! + ".xml")
+        writeToFile(outputString, file: configuration.outLocation + identifierFilename + ".xml")
     }
     
     func writeConstants(_ name: String, value: Any, level: Int) -> String {
