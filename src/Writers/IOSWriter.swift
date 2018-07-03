@@ -11,7 +11,7 @@ class IOSWriter: Writer {
     func writeIds(_ identifiers: Dictionary<String, Any>) {
         
         guard let identifierFilename = configuration.identifierFilename else {
-            Utils.always("Android configuration needs an Identifier filename specified")
+            Utils.always("iOS configuration needs an Identifier filename specified")
             exit(-1)
         }
         
@@ -21,7 +21,8 @@ class IOSWriter: Writer {
         var tempString:String = String()
         
         outputString.append("/* Auto-generated. Do not modify */\n\n")
-        outputString.append("import UIKit\n")
+        outputString.append("import UIKit\n\n")
+        outputString.append("// swiftlint:disable nesting\n\n")
         outputString.append("public struct \(identifierFilename) {\n")
         
         for (key, value) in Array(identifiers).sorted(by: {$0.0 < $1.0}) {
