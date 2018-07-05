@@ -19,8 +19,9 @@ class AndroidWriter: Writer {
         
         var outputString:String = String()
         
+        outputString.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n")
         outputString.append("<!--  Auto-generated. Do not modify  -->\n\n")
-        outputString.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
+
         outputString.append("<resources>\n")
         
         for (key, value) in Array(identifiers).sorted(by: {$0.0 < $1.0}) {
@@ -45,7 +46,7 @@ class AndroidWriter: Writer {
                 if ((value as AnyObject).className.contains("Dictionary")) {
                     outputString.append(writeConstants(key, value: value, level: level))
                 } else {
-                    outputString.append("\t <item name=\(value) type=\"id\"/>\n")
+                    outputString.append("\t <item name=\"\(value)\" type=\"id\"/>\n")
                 }
             }
         }
